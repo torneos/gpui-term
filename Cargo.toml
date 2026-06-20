@@ -4,6 +4,9 @@ version = "0.1.0"
 edition = "2021"
 description = "GPU-accelerated terminal renderer for GPUI"
 license = "Apache-2.0"
+repository = "https://github.com/torm/gpui-term"
+keywords = ["terminal", "gpui", "gpu", "alacritty", "emulator"]
+categories = ["command-line-interface", "emulators"]
 
 [features]
 default = ["pty"]
