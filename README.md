@@ -76,7 +76,7 @@ Add as a git dependency:
 
 ```toml
 [dependencies]
-gpui-term = { git = "https://github.com/torm/gpui-term", rev = "3c006ef" }
+gpui-term = { git = "https://github.com/torneos/gpui-term", rev = "3c006ef" }
 ```
 
 ### Feature flags
