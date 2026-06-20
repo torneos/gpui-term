@@ -1,0 +1,62 @@
+# ─── Cargo / Rust ─────────────────────────────────────────────────────────────
+target/
+debug/
+release/
+**/*.rs.bk
+*.pdb
+*.rlib
+*.d
+*.rmeta
+
+# ─── Profiling & benchmarks ──────────────────────────────────────────────────
+*.prof*
+perf.data*
+flamegraph.svg
+criterion/
+
+# ─── Cargo mutants ────────────────────────────────────────────────────────────
+**/mutants.out*/
+
+# ─── GPUI / tree-sitter build artifacts ──────────────────────────────────────
+# Compiled tree-sitter grammars
+*.dylib
+*.so
+*.dll
+
+# ─── IDE ──────────────────────────────────────────────────────────────────────
+.idea/
+.vscode/
+*.iml
+*.code-workspace
+.zed/
+
+# ─── OS ───────────────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.tmp
+*.swp
+*~
+
+# ─── Environment / secrets ───────────────────────────────────────────────────
+.env*
+!.env.example
+*.key
+*.pem
+*.crt
+
+# ─── Logs ─────────────────────────────────────────────────────────────────────
+*.log
+
+# ─── Coverage ─────────────────────────────────────────────────────────────────
+lcov.info
+tarpaulin-report.html
+coverage/
+*.profraw
+
+# ─── Worktree-local scratch (build wrappers, generated apps, etc.) ──────────
+/tmp/
+.claude/
+.otto/
+.opencode/
+.zed/

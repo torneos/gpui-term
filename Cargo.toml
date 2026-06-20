@@ -1,0 +1,35 @@
+[package]
+name = "gpui-term"
+version = "0.1.0"
+edition = "2021"
+description = "GPU-accelerated terminal renderer for GPUI"
+license = "Apache-2.0"
+
+[features]
+default = ["pty"]
+pty = []
+ssh = ["dep:russh", "dep:russh-config", "dep:tokio"]
+
+[dependencies]
+gpui = { git = "https://github.com/zed-industries/zed", rev = "1d217ee39d381ac101b7cf49d3d22451ac1093fe" }
+gpui_platform = { git = "https://github.com/zed-industries/zed", rev = "1d217ee39d381ac101b7cf49d3d22451ac1093fe", features = ["font-kit"] }
+alacritty_terminal = { git = "https://github.com/zed-industries/alacritty", rev = "fcf32feacb367b75ec84dd40f041e4fd411d3cc1" }
+log = "0.4"
+anyhow = "1"
+
+[target.'cfg(unix)'.dependencies]
+libc = "0.2"
+
+# SSH feature dependencies
+russh = { version = "0.61", optional = true }
+russh-config = { version = "0.58", optional = true }
+tokio = { version = "1", features = ["rt", "net", "io-util", "sync", "macros"], optional = true }
+
+[[example]]
+name = "minimal"
+path = "examples/minimal.rs"
+
+[lints.rust]
+unused = { level = "warn" }
+unused_imports = "warn"
+unused_variables = "warn"
